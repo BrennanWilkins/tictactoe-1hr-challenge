@@ -6,3 +6,58 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+:root {
+  --size: 3;
+}
+
+.Header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.Board {
+  display: grid;
+  grid-template-columns: repeat(var(--size), 100px);
+  grid-template-rows: repeat(var(--size), 100px);
+  width: calc(var(--size) * 100px);
+  height: calc(var(--size) * 100px);
+  margin: 20px auto;
+  grid-gap: 2px;
+  background: black;
+  cursor: pointer;
+}
+.Square {
+  background: white;
+  font-size: 30px;
+  text-align: center;
+  line-height: 100px;
+}
+.StartBtn {
+  padding: 8px;
+  border-radius: 4px;
+  background: rgb(230,230,230);
+  border: 1px solid black;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  margin: 0 auto;
+  transition: background 300ms;
+}
+.StartBtn:hover {
+  background: rgb(220,220,220);
+}
+.WinTitle {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.SizeSelect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.SizeSelect select {
+  margin-left: 5px;
+  padding: 5px;
+  font-size: 16px;
+}
